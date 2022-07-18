@@ -1,0 +1,8 @@
+<button
+  mat-raised-button
+  color="primary"
+  (click)="notify.emit()"
+  *ngIf="product && product.price > 700"
+>
+  Notify Me
+</button>

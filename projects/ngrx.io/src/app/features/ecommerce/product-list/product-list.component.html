@@ -1,0 +1,65 @@
+<ecommerce-toolbar></ecommerce-toolbar>
+
+<mat-card>
+  <h2>
+    <button mat-raised-button color="primary" class="mat-typography">
+      Products
+    </button>
+  </h2>
+  <mat-divider></mat-divider>
+  <mat-card>
+    <div class="container">
+      <div class="row">
+        <a class="flex-container" *ngFor="let product of products">
+          <div class="col">
+            <mat-card class="root-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>
+                  <a
+                    [title]="product.name + ' details'"
+                    [routerLink]="['/products', product.id]"
+                  >
+                    {{ product.name }}
+                  </a>
+                </mat-card-title>
+                <mat-card-subtitle>&nbsp;</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-title-group>
+                <mat-card-title>
+                  <mat-card-content>
+                    <p *ngIf="product.description">
+                      Description: {{ product.description }}
+                    </p>
+                  </mat-card-content>
+                </mat-card-title>
+                <img
+                  mat-card-sm-image
+                  src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                />
+              </mat-card-title-group>
+              <mat-divider inset></mat-divider>
+              <mat-card-actions>
+                <app-product-alerts [product]="product" (notify)="onNotify()">
+                </app-product-alerts>
+                <button mat-raised-button color="primary" (click)="share()">
+                  SHARE
+                </button>
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="addToCart(product)"
+                >
+                  Buy
+                </button>
+              </mat-card-actions>
+              <mat-card-footer>
+                <mat-progress-bar mode="determinate"></mat-progress-bar>
+              </mat-card-footer>
+            </mat-card>
+          </div>
+        </a>
+      </div>
+    </div>
+  </mat-card>
+</mat-card>

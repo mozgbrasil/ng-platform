@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>
+      <button
+        mat-mini-fab
+        color="primary"
+        aria-label="Example icon button with a home icon"
+        [routerLink]="['/']"
+      >
+        <mat-icon>home</mat-icon>
+      </button>
+    </span>
+
+    <span>
+      <button mat-button [routerLink]="['/']">HOME</button>
+      <button mat-button [routerLink]="['/debug']">DEBUG</button>
+      <!-- <button mat-raised-button (click)="openDialog('0ms', '0ms')">
+        DEBUG
+      </button> -->
+    </span>
+
+    <span class="example-spacer"></span>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+      routerLink="/cart"
+    >
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
