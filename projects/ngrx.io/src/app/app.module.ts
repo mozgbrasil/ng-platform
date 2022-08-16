@@ -47,6 +47,8 @@ import { SwUpdatesModule } from 'app/sw-updates/sw-updates.module';
 
 import { environment } from '../environments/environment';
 
+import { AppRoutingModule } from './app-routing.module';
+
 import { EcommerceModule } from './features/ecommerce/ecommerce.module';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 
@@ -118,6 +120,7 @@ export const svgIconProviders = [
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        AppRoutingModule,
         CustomElementsModule,
         HttpClientModule,
         MatButtonModule,

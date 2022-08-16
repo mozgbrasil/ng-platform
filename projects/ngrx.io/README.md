@@ -49,6 +49,9 @@ ng generate component features/ecommerce/product-list
 ng generate component features/ecommerce/shipping
 ng generate component features/ecommerce/toolbar --skip-import
 
+ng generate module features/landing --project site
+ng generate component features/landing/home  --project site
+
 ng generate module core
 ng generate component core/debug
 ng generate component core/focus-monitor-directives
@@ -89,7 +92,6 @@ ls
 ls
 
 cd /home/marcio/dados/acid-workflow/ng-platform/
-code --new-window .
 yarn
 yarn example:start
 
@@ -97,6 +99,9 @@ cd projects/ngrx.io/
 yarn
 yarn setup
 yarn start
+
+cd projects/ngrx.io/
+yarn serve-and-sync
 ```
 
 ```bash
